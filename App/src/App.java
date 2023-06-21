@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,7 +24,7 @@ public class App {
         
 
         System.out.println("================================================");
-        System.out.println("\t\tMENU LANÇAR JOGOS    MUDANÇA");
+        System.out.println("\t\tMENU LANÇAR JOGOS");
         System.out.println("================================================");
         System.out.println("\nInforme quantos jogos serão lançados:");
         nJogos = leitor.nextInt();
@@ -79,5 +82,25 @@ public class App {
             break;
             
         }
+    
+
+
     }
+
+    public static void ArqTxt(){
+        try {
+            BufferedWriter Escrever = new BufferedWriter(new FileWriter("Lancados.txt"));
+            for (int num : listanum) {
+                Escrever.write(elemento);
+                Escrever.newLine();
+            }
+
+            //FOR JOGOS E FOR NUMEROS
+            Escrever.close();
+            System.out.println("ArrayList gravado com sucesso no arquivo.");
+        } catch (IOException e) {
+            System.err.println("Erro ao gravar o arquivo: " + e.getMessage());
+        }
+    }
+
 }
