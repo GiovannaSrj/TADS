@@ -21,7 +21,7 @@ public class App {
         
 
         System.out.println("================================================");
-        System.out.println("\t\tMENU LANÇAR JOGOS");
+        System.out.println("\t\tMENU LANÇAR JOGOS    MUDANÇA");
         System.out.println("================================================");
         System.out.println("\nInforme quantos jogos serão lançados:");
         nJogos = leitor.nextInt();
