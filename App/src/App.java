@@ -12,7 +12,8 @@ public class App {
 
         Scanner leitor = new Scanner(System.in);
         Random aleatorio = new Random();
-
+        ArrayList<Integer> sorteio = new ArrayList<>();
+        Random aleatorioSorteio = new Random();
         List<List<Integer>> TdsJogos = new ArrayList<>();
         int nJogos, j;
         int numTemp;
@@ -83,10 +84,18 @@ public class App {
             
         }
     
-
+        //gerando os valores do sorteio
+        for(int i=0; i<6; i++){
+           int numSorteio = aleatorioSorteio.nextInt(60) + 1;
+           if(sorteio.contains(numSorteio)){
+            i--;
+           }
+           sorteio.add(numSorteio);
+        }
 
     }
 
+    
     public static void ArqTxt(){
         try {
             BufferedWriter Escrever = new BufferedWriter(new FileWriter("Lancados.txt"));
