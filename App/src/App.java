@@ -92,6 +92,17 @@ public class App {
            }
            sorteio.add(numSorteio);
         }
+        Collections.sort(sorteio);
+
+        //comparando os jogos com o sorteio
+        for(int numSorteado : TdsJogos()){
+
+
+        }
+
+        
+
+
 
     }
 
