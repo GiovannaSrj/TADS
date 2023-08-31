@@ -2,6 +2,7 @@ package EstRepet;
 
 
 public class Programa {
+    
     public static void menu(){    
         System.out.println("\n*** Menu ***");
         System.out.println("1 - Inserir na Fila");
